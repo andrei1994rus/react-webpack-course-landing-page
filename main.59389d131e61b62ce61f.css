@@ -448,35 +448,35 @@ a >:last-child span
   line-height: 1.65
 }
 
-#first
+#first_about
 {
   color: #6366f1;
   border-color: #6366f1
 }
 
-#first .section_about__wrap__features__item__icon
+#first_about .section_about__wrap__features__item__icon
 {
   border: 1px solid #6366f140
 }
 
-#second
+#second_about
 {
   color: #a855f7;
   border-color: #a855f7
 }
 
-#second .section_about__wrap__features__item__icon
+#second_about .section_about__wrap__features__item__icon
 {
   border: 1px solid #a855f740
 }
 
-#thirst
+#thirst_about
 {
   color: #06b6d4;
   border-color: #06b6d4
 }
 
-#thirst .section_about__wrap__features__item__icon
+#thirst_about .section_about__wrap__features__item__icon
 {
   border: 1px solid #06b6d440
 }
@@ -649,6 +649,7 @@ a >:last-child span
 
 .section_program__wrap__course-card__info__icon
 {
+  color: #6366f1;
   font-size: 52px;
   margin-bottom: 12px
 }
@@ -1340,6 +1341,37 @@ a >:last-child span
   font-size: 15px;
   line-height: 1.7;
   padding: 0 24px 22px
+}
+.modal__modal_body
+{
+  display: none
+}
+
+.modal__modal_body.open
+{
+  display: block;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 95vw;
+  height: 100vh;
+  z-index: 500
+}
+
+.modal__modal_body h1, .modal__modal_body h2, .modal__modal_body span, .modal__modal_body div
+{
+  padding-left: 10px
+}
+
+.modal__modal_body__close
+{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  color: black;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 5px
 }
 #register
 {
