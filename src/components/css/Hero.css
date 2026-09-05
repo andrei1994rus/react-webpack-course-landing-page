@@ -34,7 +34,8 @@
 
 .hero__wrap__badge :first-child
 {
-  font-size: 18px
+  font-size: 18px;
+  font-family: 'Noto Color Emoji'
 }
 
 .hero__wrap__badge :last-child

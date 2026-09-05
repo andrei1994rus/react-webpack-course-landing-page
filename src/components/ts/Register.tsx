@@ -61,7 +61,9 @@ const Register = () => {
       <div className="section_register_decorative2" />
       <div className="section_register__wrap">
         <div className="section_register__wrap__header">
-          <span>🎓 ЗАПИСЬ НА ИНТЕНСИВ</span>
+          <span>
+            <span>🎓</span> ЗАПИСЬ НА ИНТЕНСИВ
+          </span>
           <h2>
             Начни своё{' '}
             <span className="section_register__wrap__header__text-gradient">
@@ -154,9 +156,12 @@ const Register = () => {
                   </p>
                 )}
               </div>
-              <button type="submit">Записаться на интенсив 🚀</button>
+              <button type="submit">
+                Записаться на интенсив <span>🚀</span>
+              </button>
               <p className="section_register__wrap__form-card__warning">
-                🔒 Ваши данные защищены и не передаются третьим лицам
+                <span>🔒</span> Ваши данные защищены и не передаются третьим
+                лицам
               </p>
             </form>
           ) : (
@@ -170,8 +175,8 @@ const Register = () => {
               <div>✓</div>
               <h3>Заявка принята!</h3>
               <p className="section_register__wrap__form-card__success__greeting">
-                Привет, <strong>{form.name}</strong>! 🎉 Проверь свою почту.
-                Письмо может быть в папке Спам.
+                Привет, <strong>{form.name}</strong>! <span>🎉</span> Проверь
+                свою почту. Письмо может быть в папке Спам.
               </p>
             </div>
           )}

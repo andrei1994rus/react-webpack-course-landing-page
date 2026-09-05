@@ -97,6 +97,11 @@
   line-height: 1.65
 }
 
+.section_about__wrap__features__item__icon
+{
+  font-family: 'Noto Color Emoji'
+}
+
 #first_about
 {
   color: #6366f1;

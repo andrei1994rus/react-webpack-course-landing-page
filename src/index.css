@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url('./fonts/NotoColorEmoji_subset.woff2') format('woff2');
+  font-display: swap
+}
+
 body 
 {
   margin: 0;
-  padding: 0;
+  padding: 0
 }

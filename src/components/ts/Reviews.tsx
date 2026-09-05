@@ -87,7 +87,7 @@ const Reviews = () => {
                   {r.avatar}
                 </div>
                 <div>
-                  <p className="section_reviews__wrap__review-cards__item__author__text">
+                  <p className="section_reviews__wrap__review-cards__item__author__name">
                     {r.name}
                   </p>
                 </div>

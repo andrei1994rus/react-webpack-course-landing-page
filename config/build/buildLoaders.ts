@@ -6,6 +6,28 @@ import { buildBabelLoader } from './babel/buildBabelLoader';
 export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   const isDev = options.mode === 'development';
 
+  const svgrLoader = {
+    test: /\.svg$/i,
+    use: [
+      {
+        loader: '@svgr/webpack',
+        options: {
+          icon: true,
+          svgoConfig: {
+            plugins: [
+              {
+                name: 'convertColors',
+                params: {
+                  currentColor: true,
+                },
+              },
+            ],
+          },
+        },
+      },
+    ],
+  };
+
   const cssLoaderWithSourceMap = {
     loader: 'css-loader',
     options: {
@@ -24,5 +46,13 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 
   const babelLoader = buildBabelLoader();
 
-  return [cssLoader, babelLoader];
+  const fileLoader = {
+    test: /\.woff2$/,
+    type: 'asset/resource',
+    generator: {
+      filename: 'fonts/[name].woff2',
+    },
+  };
+
+  return [fileLoader, cssLoader, babelLoader, svgrLoader];
 }

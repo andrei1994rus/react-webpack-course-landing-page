@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { scrollTo } from '../../utils/Scroll';
 import '../css/Program.css';
+import IconReact from '../../svg/IconReact.svg';
 
 const courses = [
   {
     id: 'program_first',
     tag: 'Интенсив',
     tagColor: '#6366f1',
-    icon: '⚛️',
+    icon: <IconReact />,
     title: 'Frontend-разработчик',
     subtitle: 'React',
     duration: '3 дня · 3 урока',
@@ -47,7 +48,7 @@ const Program = () => {
               id={c.id}
               onClick={() => setActive(i)}
             >
-              <span>{c.icon}</span>
+              {c.icon}
               <span>{c.title}</span>
             </button>
           ))}

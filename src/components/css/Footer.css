@@ -86,7 +86,8 @@ footer
 
 .footer__wrap__top_row__contact__data__item__icon
 {
-  font-size: 16px
+  font-size: 16px;
+  font-family: 'Noto Color Emoji'
 }
 
 .footer__wrap__top_row__contact__data__item__text

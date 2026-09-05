@@ -128,7 +128,8 @@
   color: rgba(255,255,255,0.72);
   font-size: 15px;
   line-height: 1.7;
-  margin-bottom: 24px
+  margin-bottom: 24px;
+  font-family: 'Noto Color Emoji'
 }
 
 .section_reviews__wrap__review-cards__item__author
@@ -183,7 +184,7 @@
   background: linear-gradient(135deg, #06b6d4, #06b6d488)
 }
 
-.section_reviews__wrap__review-cards__item__author__text
+.section_reviews__wrap__review-cards__item__author__name
 {
   color: #fff;
   font-size: 14px;
