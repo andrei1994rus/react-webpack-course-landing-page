@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url(fonts/NotoColorEmoji_subset.woff2) format('woff2');
+  font-display: swap
+}
+
 body 
 {
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 .nav
@@ -242,7 +248,8 @@ a >:last-child span
 
 .hero__wrap__badge :first-child
 {
-  font-size: 18px
+  font-size: 18px;
+  font-family: 'Noto Color Emoji'
 }
 
 .hero__wrap__badge :last-child
@@ -448,6 +455,11 @@ a >:last-child span
   line-height: 1.65
 }
 
+.section_about__wrap__features__item__icon
+{
+  font-family: 'Noto Color Emoji'
+}
+
 #first_about
 {
   color: #6366f1;
@@ -481,13 +493,13 @@ a >:last-child span
   border: 1px solid #06b6d440
 }
 
-#fourth
+#fourth_about
 {
   color: #22c55e;
   border-color: #22c55e
 }
 
-#fourth .section_about__wrap__features__item__icon
+#fourth_about .section_about__wrap__features__item__icon
 {
   border: 1px solid #22c55e40
 }
@@ -578,6 +590,13 @@ a >:last-child span
   gap: 8px
 }
 
+.section_program__wrap__buttons button svg
+{
+  color: black;
+  width: 20px;
+  height: 20px
+}
+
 .section_program__wrap__buttons #program_first.active
 {
   background: linear-gradient(135deg, #6366f1cc, #6366f188); 
@@ -647,11 +666,12 @@ a >:last-child span
   color: #6366f1
 }
 
-.section_program__wrap__course-card__info__icon
+.section_program__wrap__course-card__info__icon svg
 {
-  color: #6366f1;
-  font-size: 52px;
-  margin-bottom: 12px
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+  color: #6366f1 
 }
 
 .section_program__wrap h3
@@ -900,7 +920,8 @@ a >:last-child span
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px
+  font-size: 24px;
+  font-family: 'Noto Color Emoji'
 }
 
 #first_hiw .how_it_works__wrap__steps__item__top__icon
@@ -1122,7 +1143,8 @@ a >:last-child span
   color: rgba(255,255,255,0.72);
   font-size: 15px;
   line-height: 1.7;
-  margin-bottom: 24px
+  margin-bottom: 24px;
+  font-family: 'Noto Color Emoji'
 }
 
 .section_reviews__wrap__review-cards__item__author
@@ -1177,7 +1199,7 @@ a >:last-child span
   background: linear-gradient(135deg, #06b6d4, #06b6d488)
 }
 
-.section_reviews__wrap__review-cards__item__author__text
+.section_reviews__wrap__review-cards__item__author__name
 {
   color: #fff;
   font-size: 14px;
@@ -1432,6 +1454,11 @@ a >:last-child span
   letter-spacing: 0.5px
 }
 
+.section_register__wrap__header>span>span
+{
+  font-family: 'Noto Color Emoji'
+}
+
 .section_register__wrap__header h2
 {
   font-size: clamp(28px, 5vw, 48px);
@@ -1602,7 +1629,12 @@ form >:first-child
   cursor: pointer;
   box-shadow: 0 8px 32px rgba(99,102,241,0.45);
   transition: transform 0.2s, box-shadow 0.2s;
-  letter-spacing: -0.3px
+  letter-spacing: -0.3px;
+}
+
+#register button span
+{
+  font-family: 'Noto Color Emoji'
 }
 
 #register button:hover
@@ -1617,6 +1649,11 @@ form >:first-child
   color: rgba(255,255,255,0.3);
   font-size: 13px;
   margin-top: 16px
+}
+
+.section_register__wrap__form-card__warning span
+{
+  font-family: 'Noto Color Emoji'
 }
 
 .section_register__wrap__form-card__success
@@ -1658,6 +1695,11 @@ form >:first-child
   margin: 0 auto 32px
 }
 
+.section_register__wrap__form-card__success__greeting span
+{
+  font-family: 'Noto Color Emoji'
+}
+
 .section_register__wrap__form-card__success__greeting strong
 {
   color: #a78bfa
@@ -1675,7 +1717,7 @@ form >:first-child
   font-size: 25px;
   margin-left: auto;
   color: #fff;
-  cursor: pointer;
+  cursor: pointer
 }
 footer
 {
@@ -1732,7 +1774,7 @@ footer
   color: #818cf8
 }
 
-.footer__wrap__top_row__brand p
+.footer__wrap__top_row__info
 {
   color: rgba(255,255,255,0.4);
   font-size: 14px;
@@ -1765,7 +1807,8 @@ footer
 
 .footer__wrap__top_row__contact__data__item__icon
 {
-  font-size: 16px
+  font-size: 16px;
+  font-family: 'Noto Color Emoji'
 }
 
 .footer__wrap__top_row__contact__data__item__text
