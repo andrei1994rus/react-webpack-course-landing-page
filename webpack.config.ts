@@ -5,7 +5,6 @@ import { BuildMode, BuildPaths } from './config/build/types/types';
 
 interface EnvVariables {
   mode?: BuildMode;
-  analyzer?: boolean;
   port?: number;
 }
 

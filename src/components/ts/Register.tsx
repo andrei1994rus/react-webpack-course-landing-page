@@ -1,9 +1,17 @@
-import { useState, CSSProperties } from 'react';
+import { useState, CSSProperties, lazy } from 'react';
 import { Errors, FEvent } from 'src/types';
 import sendLetter from '../../utils/Letter';
-import Modal from './Modal';
 import '../css/Register.css';
 import getModal from '../../utils/getModal';
+import withSuspense from '../../hoc/withSuspense';
+
+const Success = lazy(() =>
+  import('./Success').then((module) => ({ default: module.Success }))
+);
+const Modal = lazy(() => import('./Modal'));
+
+const WithSuspenseSuccess = withSuspense(Success);
+const WithSuspenseModal = withSuspense(Modal);
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -54,9 +62,13 @@ const Register = () => {
     modal.classList.add('open');
   };
 
+  const closeSuccess = () => {
+    setSubmitted(false);
+  };
+
   return (
     <section id="register">
-      <Modal />
+      <WithSuspenseModal />
       <div className="section_register_decorative1" />
       <div className="section_register_decorative2" />
       <div className="section_register__wrap">
@@ -165,20 +177,7 @@ const Register = () => {
               </p>
             </form>
           ) : (
-            <div className="section_register__wrap__form-card__success">
-              <div
-                className="section_register__wrap__form-card__success__close"
-                onClick={() => setSubmitted(false)}
-              >
-                &#88;
-              </div>
-              <div>✓</div>
-              <h3>Заявка принята!</h3>
-              <p className="section_register__wrap__form-card__success__greeting">
-                Привет, <strong>{form.name}</strong>! <span>🎉</span> Проверь
-                свою почту. Письмо может быть в папке Спам.
-              </p>
-            </div>
+            <WithSuspenseSuccess close={closeSuccess} name={form.name} />
           )}
         </div>
       </div>

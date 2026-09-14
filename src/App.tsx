@@ -1,14 +1,22 @@
+import { lazy } from 'react';
 import Navbar from './components/ts/Navbar';
 import Hero from './components/ts/Hero';
 import About from './components/ts/About';
-import Program from './components/ts/Program';
 import HowItWorks from './components/ts/HowItWorks';
-import Reviews from './components/ts/Reviews';
 import FAQ from './components/ts/FAQ';
-import Register from './components/ts/Register';
 import Footer from './components/ts/Footer';
 
+import withSuspense from './hoc/withSuspense';
+
 import './App.css';
+
+const Reviews = lazy(() => import('./components/ts/Reviews'));
+const Program = lazy(() => import('./components/ts/Program'));
+const Register = lazy(() => import('./components/ts/Register'));
+
+const WithSuspenseReviews = withSuspense(Reviews);
+const WithSuspenseProgram = withSuspense(Program);
+const WithSuspenseRegister = withSuspense(Register);
 
 const App = () => {
   return (
@@ -16,11 +24,11 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
-      <Program />
+      <WithSuspenseProgram />
       <HowItWorks />
-      <Reviews />
+      <WithSuspenseReviews />
       <FAQ />
-      <Register />
+      <WithSuspenseRegister />
       <Footer />
     </div>
   );

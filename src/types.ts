@@ -6,3 +6,7 @@ export type Errors = Record<string, string>;
 export type Index = number | null;
 
 export interface FEvent extends FormEvent<HTMLFormElement> {}
+export interface SuccessProps {
+  close: () => void;
+  name: string;
+}

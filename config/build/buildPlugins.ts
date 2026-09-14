@@ -1,4 +1,4 @@
-import webpack, { Configuration, DefinePlugin } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/types';
@@ -15,6 +15,7 @@ export function buildPlugins({
     new HtmlWebpackPlugin({
       template: paths.html,
       title: 'Course landing page on React+Webpack',
+      minify: isProd,
     }),
     new DefinePlugin({
       __ENV__: JSON.stringify(mode),
