@@ -1,0 +1,31 @@
+.modal__modal_body
+{
+  display: none
+}
+
+.modal__modal_body.open
+{
+  display: block;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 95vw;
+  height: 100vh;
+  z-index: 500
+}
+
+.modal__modal_body h1, .modal__modal_body h2, .modal__modal_body span, .modal__modal_body div
+{
+  padding-left: 10px
+}
+
+.modal__modal_body__close
+{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  color: black;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 5px
+}
